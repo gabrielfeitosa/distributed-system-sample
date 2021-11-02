@@ -1,0 +1,34 @@
+@startuml
+
+skinparam rectangle {
+    BackgroundColor transparent
+    BorderColor transparent
+    shadowing false
+}
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME5 https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v11.1/dist
+
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/ApplicationIntegration/SimpleNotificationService.puml
+!include AWSPuml/ApplicationIntegration/SimpleQueueService.puml
+!include DEVICONS/java.puml
+!include DEVICONS/nodejs.puml
+!include DEVICONS/go.puml
+!include FONTAWESOME5/user.puml
+
+rectangle "User" <<$user>> as user
+rectangle "User Service" <<$java>> as usersvc
+rectangle "Document Service" <<$go>> as docvalid
+rectangle "Event Service" <<$nodejs>> as event
+rectangle "Topic" <<$SimpleNotificationService>> as sns
+rectangle "Queue" <<$SimpleQueueService>> as sqs
+
+user -r-> usersvc
+usersvc -r-> docvalid
+usersvc -d-> sns
+sns -d-> sqs 
+sqs -> event
+
+@enduml

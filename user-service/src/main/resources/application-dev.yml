@@ -1,0 +1,6 @@
+feign:
+  client:
+    config:
+      document:
+        url: http://localhost:8081/document
+        level: full

@@ -1,0 +1,6 @@
+feign:
+  client:
+    config:
+      document:
+        url: ${document.url}
+        loggerLevel: full
