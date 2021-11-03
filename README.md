@@ -13,7 +13,7 @@
 - [x] Config Wiremock to simulate document endpoint
 - [] Config LocalStack to simulate AWS SNS
 - [] Send event to SNS
-- [] Github Actions
+- [x] Github Actions
 - [] SonarQube
 
 ### Document Service
