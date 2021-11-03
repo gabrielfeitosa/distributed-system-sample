@@ -37,7 +37,6 @@ jobs:
         args: >
           -Dsonar.organization=gabrielfeitosa
           -Dsonar.projectKey=distributed-system:user-service
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
   build:
     runs-on: ubuntu-latest
     steps:
