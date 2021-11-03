@@ -3,12 +3,7 @@ name: Distributed Systems - User Service
 on:
   push: 
     branches: [main]
-    paths:
-      - user-service/**
-  pull_request:
-    branches: [ main ]
-    paths:
-      - user-service/**
+
 jobs:
   build:
     runs-on: ubuntu-latest
