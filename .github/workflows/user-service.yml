@@ -37,6 +37,7 @@ jobs:
         args: >
           -Dsonar.organization=gabrielfeitosa
           -Dsonar.projectKey=gabrielfeitosa_distributed-system-sample
+          -Dsonar.java.source=11
   build:
     runs-on: ubuntu-latest
     steps:
