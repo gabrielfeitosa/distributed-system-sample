@@ -14,14 +14,20 @@
 - [x] Config Wiremock to simulate document endpoint
 - [] Config LocalStack to simulate AWS SNS
 - [] Send event to SNS
-  
+- [] Github Actions
+- [] SonarQube
+
 ### Document Service
 
 - [] Start document service with Golang
 - [] Develop GET Document API
+- [] Github Actions
+- [] SonarQube
 
 ### Event Service
 
 - [] Start event service with NodeJS
 - [] Config LocalStack to simulate AWS SQS
 - [] Consuming event from SQS
+- [] Github Actions
+- [] SonarQube
