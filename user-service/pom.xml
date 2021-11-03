@@ -15,6 +15,11 @@
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <!--Sonar Properties-->
+        <sonar.organization>gabrielfeitosa</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.projectKey>distributed-system:user-service</sonar.projectKey>
+        <sonar.projectName>Distributed System: User Service</sonar.projectName>
     </properties>
     <dependencyManagement>
         <dependencies>
