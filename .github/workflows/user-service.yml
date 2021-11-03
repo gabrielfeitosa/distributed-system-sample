@@ -28,11 +28,11 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
-    - name: Build and analyze
+    - name: Code Analysis
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: cd user-service && mvn -B verify sonar:sonar -DskipTests -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gabrielfeitosa
-    - name: Build with Maven
-      run: cd user-service && mvn -B package -DskipTests
+      run: cd user-service && mvn -B clean verify sonar:sonar -DskipTests -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gabrielfeitosa
+    - name: Build
+      run: cd user-service && mvn -B clean package -DskipTests
 
