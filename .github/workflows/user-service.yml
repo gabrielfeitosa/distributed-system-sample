@@ -27,6 +27,16 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+        projectBaseDir: user-service
+        args: >
+          -Dsonar.organization=gabrielfeitosa
+          -Dsonar.projectKey=distributed-system:user-service
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Build with Maven
       run: cd user-service && mvn -B package -DskipTests
 
