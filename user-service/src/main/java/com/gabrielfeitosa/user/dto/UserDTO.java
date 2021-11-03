@@ -1,7 +1,5 @@
 package com.gabrielfeitosa.user.dto;
 
-import org.apache.catalina.User;
-
 import java.util.UUID;
 
 public class UserDTO {
