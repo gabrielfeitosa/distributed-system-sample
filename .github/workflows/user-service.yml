@@ -32,7 +32,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: cd user-service && mvn -B clean verify sonar:sonar -DskipTests -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gabrielfeitosa
+      run: cd user-service && mvn -B clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -DskipTests -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=gabrielfeitosa
     - name: Build
       run: cd user-service && mvn -B clean package -DskipTests
 
