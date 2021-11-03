@@ -14,7 +14,7 @@
 - [] Config LocalStack to simulate AWS SNS
 - [] Send event to SNS
 - [x] Github Actions
-- [] SonarQube
+- [x] SonarQube
 
 ### Document Service
 
