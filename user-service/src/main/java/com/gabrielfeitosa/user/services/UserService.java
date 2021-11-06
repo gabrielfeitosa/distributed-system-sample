@@ -5,7 +5,10 @@ import com.gabrielfeitosa.user.dto.UserDTO;
 import com.gabrielfeitosa.user.exceptions.InvalidDocumentException;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -17,9 +20,9 @@ public class UserService {
         this.documentService = documentService;
     }
 
-    public UUID create(UserCreateDTO dto){
+    public UUID create(UserCreateDTO dto) {
         var document = documentService.getDocument(dto.getDocument());
-        if(document.isValid()){
+        if (document.isValid()) {
             var user = UserDTO.build(dto, document);
             users.put(user.getId(), user);
             return user.getId();

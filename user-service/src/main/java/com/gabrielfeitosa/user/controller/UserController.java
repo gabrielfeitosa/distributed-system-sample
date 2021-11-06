@@ -21,14 +21,13 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<Map.Entry<String, List<UserDTO>>> listAll(){
+    public ResponseEntity<Map.Entry<String, List<UserDTO>>> listAll() {
         return ResponseEntity.ok(Map.entry("data", userService.listAll()));
     }
 
     @PostMapping
-    public ResponseEntity create(@RequestBody UserCreateDTO userCreateDTO){
+    public ResponseEntity create(@RequestBody UserCreateDTO userCreateDTO) {
         userService.create(userCreateDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
-
 }

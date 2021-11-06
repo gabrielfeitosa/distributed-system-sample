@@ -13,7 +13,7 @@ public class DocumentService {
         this.documentClient = documentClient;
     }
 
-    public DocumentDTO getDocument(String document){
+    public DocumentDTO getDocument(String document) {
         return documentClient.getDocument(document);
     }
 }

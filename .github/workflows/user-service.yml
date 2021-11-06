@@ -2,7 +2,6 @@ name: Distributed Systems - User Service
 
 on:
   push: 
-    branches: [main]
     paths:
           - user-service/**
 jobs:

@@ -3,4 +3,7 @@ feign:
     config:
       document:
         url: ${document.url}
-        loggerLevel: full
+        loggerLevel: basic
+        connectTimeout: 5000
+        readTimeout: 2000
+        errorDecoder: com.gabrielfeitosa.user.decoder.DocumentErrorDecode
