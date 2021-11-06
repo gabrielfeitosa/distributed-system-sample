@@ -2,7 +2,7 @@ feign:
   client:
     config:
       document:
-        url: ${document.url}
+        url: ${document.url:FAKE}
         loggerLevel: basic
         connectTimeout: 5000
         readTimeout: 2000

@@ -1,5 +1,7 @@
 package com.gabrielfeitosa.user.controller;
 
+import com.gabrielfeitosa.user.dto.DocumentDTO;
+import com.gabrielfeitosa.user.dto.UserCreateDTO;
 import com.gabrielfeitosa.user.dto.UserDTO;
 import com.gabrielfeitosa.user.services.UserService;
 import org.junit.jupiter.api.Test;
@@ -31,11 +33,12 @@ class UserControllerTest {
 
     @Test
     void listAll() throws Exception {
-        when(userService.listAll()).thenReturn(List.of(new UserDTO()));
+        when(userService.listAll()).thenReturn(List.of(UserDTO.build(new UserCreateDTO("test", "doc"), new DocumentDTO())))
+        ;
         mockMvc.perform(get("/user").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.data.length()").value(2))
-                .andExpect(jsonPath("$.data[*].name", containsInAnyOrder("test", "test1")));
+                .andExpect(jsonPath("$.data.length()").value(1))
+                .andExpect(jsonPath("$.data[*].name", containsInAnyOrder("test")));
     }
 
     @Test
