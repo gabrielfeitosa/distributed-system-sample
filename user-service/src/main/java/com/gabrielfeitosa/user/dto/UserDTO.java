@@ -9,7 +9,7 @@ public class UserDTO {
     private DocumentDTO document;
 
     public static UserDTO build(UserCreateDTO userCreateDTO, DocumentDTO document) {
-        var user  = new UserDTO();
+        var user = new UserDTO();
         user.id = UUID.randomUUID();
         user.name = userCreateDTO.getName();
         user.document = document;
