@@ -41,7 +41,6 @@ class DocumentServiceTest {
     @Test
     public void documentTimeout() {
         assertThrows(RetryableException.class, () -> documentService.getDocument("delay"));
-
     }
 
     @Test

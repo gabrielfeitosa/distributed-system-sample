@@ -2,8 +2,8 @@ name: Distributed Systems - User Service
 
 on:
   push: 
-    # paths:
-    #       - user-service/**
+    paths:
+          - user-service/**
 jobs:
   build:
     runs-on: ubuntu-latest
