@@ -4,6 +4,7 @@ on:
   push: 
     paths:
           - user-service/**
+          - .github/workflows/user-service.yml
 jobs:
   build:
     runs-on: ubuntu-latest

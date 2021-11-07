@@ -1,5 +1,6 @@
 # Distributed System Sample
 [![Distributed Systems - User Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml)
+[![Distributed Systems - Document Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml)
 ## Architecture
 
 ![architecture](architecture.png)
