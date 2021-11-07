@@ -18,10 +18,10 @@
 
 ### Document Service
 
-- [] Start document service with Golang
-- [] Develop GET Document API
-- [] Github Actions
-- [] SonarQube
+- [x] Start document service with Golang
+- [x] Develop GET Document API
+- [x] Github Actions
+- [x] SonarQube
 
 ### Event Service
 
