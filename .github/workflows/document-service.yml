@@ -4,6 +4,7 @@ on:
   push: 
     paths:
           - document-service/**
+          - .github/workflows/document-service.yml
 jobs:
   build:
     runs-on: ubuntu-latest
