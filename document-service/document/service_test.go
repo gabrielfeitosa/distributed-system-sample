@@ -1,12 +1,28 @@
-package main
+package document_test
 
 import (
+	"document-service/document"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"testing"
 
+	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )
+
+func TestMain(m *testing.M) {
+	gin.SetMode(gin.TestMode)
+
+	os.Exit(m.Run())
+}
+
+func setupRouter() *gin.Engine {
+	r := gin.Default()
+	svc := document.NewService()
+	r.GET("/document/:id", svc.GetDocument)
+	return r
+}
 
 func TestGetValidDocument(t *testing.T) {
 	router := setupRouter()
