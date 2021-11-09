@@ -21,7 +21,6 @@ class DocumentServiceTest {
     public void validDocument() {
         var document = documentService.getDocument("valid");
         assertEquals(document.getDocument(), "valid");
-        assertEquals(document.getType(), "type1");
         assertTrue(document.isValid());
     }
 
@@ -29,7 +28,6 @@ class DocumentServiceTest {
     public void invalidDocument() {
         var document = documentService.getDocument("invalid");
         assertEquals(document.getDocument(), "invalid");
-        assertNull(document.getType());
         assertFalse(document.isValid());
     }
 
