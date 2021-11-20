@@ -12,8 +12,8 @@
 - [x] Start user service with Java using Spring Boot
 - [x] Develop POST user API
 - [x] Config Wiremock to simulate document endpoint
-- [] Config LocalStack to simulate AWS SNS
-- [] Send event to SNS
+- [x] Config LocalStack to simulate AWS SNS
+- [x] Send event to SNS
 - [x] Github Actions
 - [x] SonarQube
 
