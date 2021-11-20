@@ -7,3 +7,17 @@ feign:
         connectTimeout: 5000
         readTimeout: 2000
         errorDecoder: com.gabrielfeitosa.user.decoder.DocumentErrorDecode
+
+cloud:
+  aws:
+    region:
+      static: ${AWS_REGION:us-east-1}
+    sns:
+      enabled: true
+    credentials:
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+
+user:
+  sns:
+    new-user: ${NEW_USER_SNS}

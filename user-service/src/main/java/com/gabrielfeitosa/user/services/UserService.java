@@ -14,10 +14,12 @@ import java.util.UUID;
 public class UserService {
 
     private DocumentService documentService;
+    private UserNotification userNotification;
     private static Map<UUID, UserDTO> users = new HashMap<>();
 
-    public UserService(DocumentService documentService) {
+    public UserService(DocumentService documentService, UserNotification userNotification) {
         this.documentService = documentService;
+        this.userNotification = userNotification;
     }
 
     public UUID create(UserCreateDTO dto) {
@@ -25,6 +27,7 @@ public class UserService {
         if (document.isValid()) {
             var user = UserDTO.build(dto, document);
             users.put(user.getId(), user);
+            userNotification.publishNewUser(user);
             return user.getId();
         }
         throw new InvalidDocumentException(dto.getDocument());

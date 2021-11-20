@@ -5,4 +5,20 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ./src/test/resources/mappings/document.json:/home/wiremock
+      - ./src/test/resources/:/home/wiremock
+
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+      - "8088:8080"
+    environment:
+      - SERVICES=sns,sqs
+      - DATA_DIR=/tmp/localstack/data
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - HOST_TMP_FOLDER=${TMPDIR:-/tmp/}localstack
+    volumes:
+      - "/tmp/localstack:/tmp/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - '.config/localstack.sh:/docker-entrypoint-initaws.d/localSetup.sh'

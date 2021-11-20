@@ -4,3 +4,18 @@ feign:
       document:
         url: http://localhost:8081/document
         level: full
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
+    sns:
+      enabled: true
+      endpoint: http://localhost:4566
+    credentials:
+      access-key: foo
+      secret-key: bar
+
+user:
+  sns:
+    new-user: arn:aws:sns:us-east-1:000000000000:new_user
