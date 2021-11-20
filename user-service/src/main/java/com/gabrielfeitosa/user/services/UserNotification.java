@@ -1,6 +1,5 @@
 package com.gabrielfeitosa.user.services;
 
-import com.amazonaws.services.sns.AmazonSNS;
 import com.gabrielfeitosa.user.config.UserProperties;
 import com.gabrielfeitosa.user.dto.UserDTO;
 import io.awspring.cloud.messaging.core.NotificationMessagingTemplate;
@@ -12,8 +11,8 @@ public class UserNotification {
     private NotificationMessagingTemplate messagingTemplate;
     private UserProperties userProperties;
 
-    public UserNotification(AmazonSNS amazonSNS, UserProperties userProperties) {
-        this.messagingTemplate = new NotificationMessagingTemplate(amazonSNS);
+    public UserNotification(NotificationMessagingTemplate messagingTemplate, UserProperties userProperties) {
+        this.messagingTemplate = messagingTemplate;
         this.userProperties = userProperties;
     }
 
