@@ -1,4 +1,4 @@
-name: Distributed Systems - Event Service
+name: Event Service
 
 on:
   push: 

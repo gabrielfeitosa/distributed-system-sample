@@ -1,11 +1,11 @@
 # Distributed System Sample
-[![Distributed Systems - User Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml)
+[![User Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=distributed-system%3Auser-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=distributed-system%3Auser-service)
 
-[![Distributed Systems - Document Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml)
+[![Document Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=distributed-system%3Adocument-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=distributed-system%3Adocument-service)
 
-[![Distributed Systems - Event Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/event-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/event-service.yml)
+[![Event Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/event-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/event-service.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=distributed-system%3Aevent-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=distributed-system%3Aevent-service)
 
 
