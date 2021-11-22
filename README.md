@@ -1,6 +1,7 @@
 # Distributed System Sample
 [![Distributed Systems - User Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/user-service.yml)
 [![Distributed Systems - Document Service](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml/badge.svg)](https://github.com/gabrielfeitosa/distributed-system-sample/actions/workflows/document-service.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=distributed-system%3Aevent-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=distributed-system%3Aevent-service)
 ## Architecture
 
 ![architecture](architecture.png)
