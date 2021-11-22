@@ -30,7 +30,7 @@ jobs:
         key: ${{ runner.os }}-sonar
         restore-keys: ${{ runner.os }}-sonar
     - name: Build & Test
-      run: yarn install && yarn test
+      run: cd event-service && yarn install && yarn test
     - name: Code Analysis
       uses: sonarsource/sonarcloud-github-action@master
       env:
