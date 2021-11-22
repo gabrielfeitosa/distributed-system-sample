@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Gabriel Feitosa",
   "license": "MIT",
+  "scripts": {
+    "test": "echo 'testing'"
+  },
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.42.0",
     "dotenv": "^10.0.0"
