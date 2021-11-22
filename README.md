@@ -26,8 +26,8 @@
 
 ### Event Service
 
-- [] Start event service with NodeJS
-- [] Config LocalStack to simulate AWS SQS
-- [] Consuming event from SQS
-- [] Github Actions
-- [] SonarQube
+- [x] Start event service with NodeJS
+- [x] Config LocalStack to simulate AWS SQS
+- [x] Consuming event from SQS
+- [x] Github Actions
+- [x] SonarQube
